@@ -1,0 +1,201 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\views\\pierres\\modifier.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\views\\pierres\\modifier.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\controllers\\pierrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\controllers\\pierrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\models\\carat_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\models\\carat_.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\models\\vendrepierreviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\models\\vendrepierreviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\controllers\\vendrepierrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\controllers\\vendrepierrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\views\\pierres\\stock.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\views\\pierres\\stock.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\models\\pierrestockviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\models\\pierrestockviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\views\\vendrepierre\\vendre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\views\\vendrepierre\\vendre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\models\\mouvementstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\models\\mouvementstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|c:\\users\\romeo\\source\\repos\\stone1234\\stone1234\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C667B1D7-8641-4BE0-B639-2CC4CCC74477}|Stone1234\\Stone1234.csproj|solutionrelative:stone1234\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Stone1234\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Stone1234\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T10:05:50.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Carat_.cs",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Models\\Carat_.cs",
+              "RelativeDocumentMoniker": "Stone1234\\Models\\Carat_.cs",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Models\\Carat_.cs",
+              "RelativeToolTip": "Stone1234\\Models\\Carat_.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T10:01:55.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Modifier.cshtml",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Views\\Pierres\\Modifier.cshtml",
+              "RelativeDocumentMoniker": "Stone1234\\Views\\Pierres\\Modifier.cshtml",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Views\\Pierres\\Modifier.cshtml",
+              "RelativeToolTip": "Stone1234\\Views\\Pierres\\Modifier.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAiwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-24T09:54:24.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Stock.cshtml",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Views\\Pierres\\Stock.cshtml",
+              "RelativeDocumentMoniker": "Stone1234\\Views\\Pierres\\Stock.cshtml",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Views\\Pierres\\Stock.cshtml",
+              "RelativeToolTip": "Stone1234\\Views\\Pierres\\Stock.cshtml",
+              "ViewState": "AgIAAE0AAABAAAAAAAAiwFcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-24T09:06:07.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VendrePierreViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Models\\VendrePierreViewModel.cs",
+              "RelativeDocumentMoniker": "Stone1234\\Models\\VendrePierreViewModel.cs",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Models\\VendrePierreViewModel.cs",
+              "RelativeToolTip": "Stone1234\\Models\\VendrePierreViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T09:00:11.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PierresController.cs",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Controllers\\PierresController.cs",
+              "RelativeDocumentMoniker": "Stone1234\\Controllers\\PierresController.cs",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Controllers\\PierresController.cs",
+              "RelativeToolTip": "Stone1234\\Controllers\\PierresController.cs",
+              "ViewState": "AgIAALgAAACAmZmZmZktwOYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T16:30:32.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Vendre.cshtml",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Views\\VendrePierre\\Vendre.cshtml",
+              "RelativeDocumentMoniker": "Stone1234\\Views\\VendrePierre\\Vendre.cshtml",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Views\\VendrePierre\\Vendre.cshtml",
+              "RelativeToolTip": "Stone1234\\Views\\VendrePierre\\Vendre.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAiwGQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-23T16:45:06.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VendrePierreController.cs",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Controllers\\VendrePierreController.cs",
+              "RelativeDocumentMoniker": "Stone1234\\Controllers\\VendrePierreController.cs",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Controllers\\VendrePierreController.cs",
+              "RelativeToolTip": "Stone1234\\Controllers\\VendrePierreController.cs",
+              "ViewState": "AgIAADEAAACAAAAAAAAgwHcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T16:30:28.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MouvementStock.cs",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Models\\MouvementStock.cs",
+              "RelativeDocumentMoniker": "Stone1234\\Models\\MouvementStock.cs",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Models\\MouvementStock.cs",
+              "RelativeToolTip": "Stone1234\\Models\\MouvementStock.cs",
+              "ViewState": "AgIAAAUAAADgMzMzMzMbwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T16:28:01.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PierreStockViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Models\\PierreStockViewModel.cs",
+              "RelativeDocumentMoniker": "Stone1234\\Models\\PierreStockViewModel.cs",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Models\\PierreStockViewModel.cs",
+              "RelativeToolTip": "Stone1234\\Models\\PierreStockViewModel.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA0wBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T08:20:29.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Stone1234\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Romeo\\source\\repos\\Stone1234\\Stone1234\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Stone1234\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAB8AAAAAMjMzMzMLwAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-23T07:12:43.989Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

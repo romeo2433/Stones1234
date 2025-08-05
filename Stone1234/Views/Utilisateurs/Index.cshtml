@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Stones.Models.Utilisateur>
+
+@{
+    ViewData["Title"] = "Liste des Utilisateurs";
+    Layout = "_Layout";
+}
+
+<div class="pagetitle">
+    <h1>@ViewData["Title"]</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Accueil</a></li>
+            <li class="breadcrumb-item active">Utilisateurs</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Liste complète</h5>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID Utilisateur</th>
+                                    <th>Nom Complet</th>
+                                    <th>Numéro</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.IdUtilisateur</td>
+                                        <td>@item.NomComplet</td>
+                                        <td>@item.Numero</td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.IdUtilisateur" class="btn btn-sm btn-primary">
+                                                <i class="bi bi-pencil"></i>
+                                            </a>
+                                            <a asp-action="Delete" asp-route-id="@item.IdUtilisateur" class="btn btn-sm btn-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

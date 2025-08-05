@@ -1,0 +1,111 @@
+﻿@model Stones.Models.VendrePierreViewModel
+
+<div class="pagetitle">
+    <h1>Vendre une Pierre</h1>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
+    </div>
+}
+
+<section class="section">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Détails de la vente</h5>
+
+            <form asp-action="Vendre" method="post">
+                @* Champs cachés *@
+                <input type="hidden" asp-for="Id_pierre" />
+                <input type="hidden" asp-for="Prix_vente" />
+                <input type="hidden" asp-for="Nom_pierre" />
+                <input type="hidden" asp-for="Qualite" />
+                <input type="hidden" asp-for="Carat" />
+                <input type="hidden" asp-for="Forme" />
+
+                @* Infos pierre *@
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Pierre</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" value="@Model.Nom_pierre" readonly />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Qualité</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" value="@Model.Qualite" readonly />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Quantité Disponible</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" value="@Model.QuantiteDisponible" readonly />
+                    </div>
+                </div>
+
+                @* Quantité à vendre *@
+                <div class="row mb-3">
+                    <label asp-for="QuantiteAVendre" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="QuantiteAVendre" class="form-control" id="QuantiteAVendre" type="number" step="any" />
+                        <span asp-validation-for="QuantiteAVendre" class="text-danger"></span>
+                    </div>
+                </div>
+
+                @* Total calculé *@
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Total</label>
+                    <div class="col-sm-10">
+                        <input asp-for="Total" class="form-control" id="Total" readonly />
+                        <span id="TotalFormatted">@Model.Total.ToString("C")</span>
+                    </div>
+                </div>
+
+                @* Boutons *@
+                <div class="offset-sm-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Confirmer la vente</button>
+                    <a asp-action="Stock" asp-controller="Pierres" class="btn btn-secondary">Annuler</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const quantiteInput = document.getElementById('QuantiteAVendre');
+            const totalInput = document.getElementById('Total');
+            const totalFormatted = document.getElementById('TotalFormatted');
+            const prixVente = parseFloat('@Model.Prix_vente'.replace(",", "."));
+
+            quantiteInput.addEventListener('input', function () {
+                // remplace les virgules par des points
+                let value = this.value.replace(",", ".");
+                let quantite = parseFloat(value) || 0;
+                let total = quantite * prixVente;
+
+                totalInput.value = total.toFixed(2);
+                totalFormatted.textContent = total.toLocaleString('fr-FR', {
+                    style: 'currency',
+                    currency: 'EUR'
+                });
+            });
+        });
+    </script>
+}

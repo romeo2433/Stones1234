@@ -1,0 +1,123 @@
+﻿<aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <!-- Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Home" asp-action="Index">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <!-- Gestion des Utilisateurs -->
+        <li class="nav-heading">Gestion des Utilisateurs</li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#utilisateurs-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-people"></i><span>Utilisateurs</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="utilisateurs-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a asp-controller="Utilisateurs" asp-action="Index" class="d-flex align-items-center">
+                        <i class="bi bi-list-ul me-2"></i><span>Liste des utilisateurs</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="Utilisateurs" asp-action="Create" class="d-flex align-items-center">
+                        <i class="bi bi-person-plus me-2"></i><span>Ajouter un utilisateur</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Administration -->
+        <li class="nav-heading">Administration</li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" asp-controller="Auth" asp-action="Logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Déconnexion</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+
+    @section Styles {
+        <style>
+            .sidebar {
+                width: 250px;
+                min-height: 100vh;
+                background: #f8f9fa;
+                padding: 15px;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            .sidebar.loaded {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .nav-item .nav-link {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                font-size: 16px;
+                text-decoration: none;
+                color: #333;
+                transition: all 0.3s ease;
+            }
+
+            .nav-item .nav-link i {
+                margin-right: 10px;
+            }
+
+            .nav-item .nav-link:hover {
+                background: #007bff;
+                color: white;
+                border-radius: 5px;
+            }
+
+            .nav-content {
+                padding-left: 20px;
+            }
+
+            .nav-content a {
+                display: block;
+                padding: 8px;
+                font-size: 14px;
+                color: #555;
+            }
+
+            .nav-content a:hover {
+                color: #007bff;
+            }
+        </style>
+    }
+
+    @section Scripts {
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('.sidebar').classList.add('loaded');
+
+                // Gestion active menu
+                const currentPath = window.location.pathname;
+                document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
+                        // Ouvrir les parents collapse si nécessaire
+                        const collapseParent = link.closest('.collapse');
+                        if (collapseParent) {
+                            collapseParent.classList.add('show');
+                            const trigger = document.querySelector(`[data-bs-target="#${collapseParent.id}"]`);
+                            if (trigger) trigger.classList.remove('collapsed');
+                        }
+                    }
+                });
+            });
+        </script>
+    }

@@ -1,0 +1,99 @@
+﻿    @using Stones.Models
+@model IEnumerable<PierreStockViewModel>
+@{
+    var searchCriteria = ViewBag.SearchCriteria as SearchCriteria ?? new SearchCriteria();
+}
+
+<div class="pagetitle">
+    <h1>Inventaire des Pierres</h1>
+</div>
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Stock actuel</h5>
+
+                    <!-- Formulaire de recherche -->
+                    <div class="search-form mb-4">
+                        <form method="get" class="row g-3">
+                            <div class="col-md-3">
+                                <label class="form-label">Nom de la pierre</label>
+                                <input type="text" class="form-control" name="NomPierre" value="@searchCriteria.NomPierre">
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Qualité</label>
+                                <input type="text" class="form-control" name="Qualite" value="@searchCriteria.Qualite">
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Carat (min)</label>
+                                <input type="number" step="0.1" class="form-control" name="CaratMin" value="@searchCriteria.CaratMin">
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Carat (max)</label>
+                                <input type="number" step="0.1" class="form-control" name="CaratMax" value="@searchCriteria.CaratMax">
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Forme</label>
+                                <input type="text" class="form-control" name="Forme" value="@searchCriteria.Forme">
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary">Rechercher</button>
+                                <a href="@Url.Action("Stock")" class="btn btn-secondary">Réinitialiser</a>
+                            </div>
+                        </form>
+                    </div>
+                    @if (TempData["success"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["success"]</div>
+                    }
+                    @if (TempData["error"] != null)
+                    {
+                        <div class="alert alert-danger">@TempData["error"]</div>
+                    }
+                    <table class="table table-striped datatable">
+                        <thead>
+                            <tr>
+                                <th>Pierre</th>
+                                <th>Qualité</th>
+                                <th>Carat</th>
+                                <th>Forme</th>
+                                <th>Quantité</th>
+                                <th>Prix Unitaire</th>
+                                <th>Valeur Totale</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Nom_pierre</td>
+                                    <td>@item.Qualite</td>
+                                    <td>@item.Carat</td>
+                                    <td>@item.Forme</td>
+                                    <td>@item.Quantite_totale</td>
+                                    <td>@item.Prix_vente.ToString("C")</td>
+                                    <td>@item.ValeurTotale.ToString("C")</td>
+                                    <td>
+                                        <a href="@Url.Action("Vendre", "VendrePierre", new { id = item.Id_pierre })" class="btn btn-sm btn-warning">Vendre</a>
+                                        <a href="@Url.Action("Modifier", "Pierres", new { id = item.Id_pierre })" class="btn btn-sm btn-info">Modifier</a>
+
+
+                                        <form method="post" action="@Url.Action("Delete", "Pierres")" style="display:inline;" onsubmit="return confirm('Voulez-vous vraiment supprimer cette pierre ?');">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@item.Id_pierre" />
+                                            <button type="submit" class="btn btn-sm btn-danger">Supprimer</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

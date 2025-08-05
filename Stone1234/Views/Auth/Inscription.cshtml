@@ -1,0 +1,54 @@
+﻿@model Stones.Models.Utilisateur
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Inscription";
+}
+
+<div class="pagetitle">
+    <h1>Inscription</h1>
+</div>
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Nouvel Utilisateur</h5>
+
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success">
+                            @TempData["SuccessMessage"]
+                        </div>
+                    }
+
+                    <form asp-controller="Auth" asp-action="Inscription" method="post">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="mb-3">
+                            <label asp-for="NomComplet" class="form-label"></label>
+                            <input asp-for="NomComplet" class="form-control" />
+                            <span asp-validation-for="NomComplet" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Numero" class="form-label"></label>
+                            <input asp-for="Numero" class="form-control" />
+                            <span asp-validation-for="Numero" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">S'inscrire</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

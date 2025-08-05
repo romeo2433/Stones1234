@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Bienvenue";
+    Layout = "_Layout";
+    <!-- Utilise le template NiceAdmin -->
+}
+
+<div class="pagetitle">
+    <h1>Bienvenue, @ViewBag.NomUtilisateur !</h1>
+</div>
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Connexion réussie</h5>
+                    <p class="mb-4">Vous avez accès à toutes les fonctionnalités.</p>
+
+                    <div class="d-flex justify-content-center gap-3">
+                        <a asp-controller="Utilisateurs" asp-action="Index" class="btn btn-primary">
+                            <i class="bi bi-people"></i> Gérer les utilisateurs
+                        </a>
+                        <a asp-controller="Reservations" asp-action="Index" class="btn btn-success">
+                            <i class="bi bi-calendar-check"></i> Voir les réservations
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

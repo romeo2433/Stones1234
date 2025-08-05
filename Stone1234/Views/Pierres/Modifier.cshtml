@@ -1,0 +1,65 @@
+﻿@model Stones.Models.Pierre
+
+@{
+    ViewData["Title"] = "Modifier une Pierre";
+}
+
+<h2>Modifier Pierre</h2>
+
+<form asp-action="Modifier" method="post">
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Id_pierre)
+
+    <div class="mb-3">
+        <label class="form-label">Nom de la pierre</label>
+        @Html.TextBoxFor(m => m.Nom_pierre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Nom_pierre, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Prix de vente</label>
+        @Html.TextBoxFor(m => m.Prix_vente, new { @class = "form-control", type = "number", step = "0.01" })
+        @Html.ValidationMessageFor(m => m.Prix_vente, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Qualité</label>
+        @{
+            var qualitesList = ViewBag.Qualites != null
+            ? new SelectList(ViewBag.Qualites, "Id_qua", "Nom_qualite")
+            : new SelectList(Enumerable.Empty<SelectListItem>());
+        }
+        @Html.DropDownListFor(m => m.Id_qua, qualitesList, "Sélectionner", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Id_qua, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Carat</label>
+        @{
+            var caratsList = ViewBag.Carats != null
+            ? new SelectList(ViewBag.Carats, "id_carat", "valeur")
+            : new SelectList(Enumerable.Empty<SelectListItem>());
+        }
+        @Html.DropDownListFor(m => m.Id_carat, caratsList, "Sélectionner", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Id_carat, "", new { @class = "text-danger" })
+
+        @if (ViewBag.Carats == null)
+        {
+            <span class="text-danger">Aucun carat disponible</span>
+        }
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Forme</label>
+        @{
+            var formesList = ViewBag.Formes != null
+            ? new SelectList(ViewBag.Formes, "Id_forme", "Nom_forme")
+            : new SelectList(Enumerable.Empty<SelectListItem>());
+        }
+        @Html.DropDownListFor(m => m.Id_forme, formesList, "Sélectionner", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Id_forme, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+    <a href="@Url.Action("Stock")" class="btn btn-secondary">Annuler</a>
+</form>

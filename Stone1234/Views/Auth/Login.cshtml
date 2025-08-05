@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Connexion";
+    Layout = null; // Pas de layout pour la page de login
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-container card shadow">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Connexion</h2>
+
+                <!-- Affiche le message d'erreur -->
+                @if (ViewData.ModelState["Numero"]?.Errors.Count > 0)
+                {
+                    <div class="alert alert-danger">
+                        @ViewData.ModelState["Numero"].Errors.First().ErrorMessage
+                    </div>
+                }
+
+                <form asp-action="Login" method="post">
+                    <div class="mb-3">
+                        <label for="numero" class="form-label">Numéro de téléphone</label>
+                        <input type="text" class="form-control" id="numero" name="numero" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

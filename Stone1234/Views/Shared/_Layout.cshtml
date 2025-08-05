@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Meta tags et title -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>@ViewData["Title"] - Stones</title>
+
+    <!-- CSS -->
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="d-flex align-items-center justify-content-between">
+            <a asp-controller="Home" asp-action="Index" class="logo d-flex align-items-center">
+                <img src="~/assets/img/logo.png" alt="Logo">
+                <span class="d-none d-lg-block">Stones</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div>
+    </header>
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+        <ul class="sidebar-nav" id="sidebar-nav">
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Gestion des Utilisateurs -->
+            <li class="nav-heading">Gestion des Utilisateurs</li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#utilisateurs-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-people-fill"></i>
+                    <span>Utilisateurs</span>
+                    <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="utilisateurs-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a asp-controller="Utilisateurs" asp-action="Index" class="d-flex align-items-center">
+                            <i class="bi bi-list-check"></i>
+                            <span>Liste complète</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Gestion des Pierres -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" asp-controller="Pierres" asp-action="Stock">
+                    <i class="bi bi-gem"></i>
+                    <span>Inventaire Pierres</span>
+                </a>
+            </li>
+            <li>
+                <a asp-controller="AjoutPierre" asp-action="Index" class="d-flex align-items-center">
+                    <i class="bi bi-plus-circle"></i>
+                    <span>Ajouter pierre</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- ======= Main Content ======= -->
+    <main id="main" class="main">
+        <div class="pagetitle">
+            @RenderBody()
+        </div>
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Stones</span></strong>. All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Section Scripts (doit être placée avant la fermeture du body) -->
+    @RenderSection("Scripts", required: false)
+
+    <!-- Script de base -->
+    <script>
+        // Toggle sidebar
+        document.querySelector('.toggle-sidebar-btn').addEventListener('click', function() {
+            document.querySelector('body').classList.toggle('toggle-sidebar');
+        });
+    </script>
+</body>
+</html>
