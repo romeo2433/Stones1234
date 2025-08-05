@@ -72,10 +72,3 @@ Lancer les migrations (si EF Core)
    dotnet run
 
 
-
-
-
-
-
-
-
