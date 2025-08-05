@@ -60,17 +60,22 @@ L'application utilise une **authentification par numéro de téléphone**, avec 
    git clone https:https://github.com/romeo2433/Stones1234.git
    cd nom-du-repo
 
-
 Configurer la base PostgreSQL
 
 Créer une base nommée stones 
 
 Mettre à jour la chaîne de connexion dans appsettings.json
 
-
-
 Lancer les migrations (si EF Core)
+   ```bash
+   dotnet ef database update
+   dotnet run
 
-dotnet ef database update
 
-dotnet run
+
+
+
+
+
+
+
